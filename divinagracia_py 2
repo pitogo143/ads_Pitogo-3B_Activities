@@ -1,0 +1,11 @@
+def check_num(num):
+    if num > 10:
+        print ("the number is positive")
+    else:
+        print ("The number is negative")
+
+number = int(input("Enter a number:"))
+check_num(number)
+            
+
+            
