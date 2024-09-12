@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('course_name');
-         $table->timelapse();
+         $table->timetmaps();
       });
     }
 
     Route::get('/course/create', function () {
         $course = new Course();
-        $course->course_name = 'Intaduction to Database';
+        $course->course_name = 'Intraduction to Database';
         $course->save();
-        re
-    }
+        return 'Course Created!';
+    }); 
 
 
     /**

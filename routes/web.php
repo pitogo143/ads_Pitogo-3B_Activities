@@ -19,10 +19,9 @@ use App\Models\course;
 
 Route::get('/students/create', function () {
      $student = new student();
-     $student->first_name = 'Ronalyn';
-     $student->last_name = 'Pitogo';
-     $student->age = '20';
-     $student->email = 'pitogoronalyn4@gmail.com';
+     $student->first_name = 'John';
+     $student->last_name = 'Doe';
+     $student->email = 'johndoe@example.com';
      $student->save();
      return 'Student Created';
 });
@@ -33,14 +32,14 @@ Route::get('/students', function () {
 });
 
 Route::get('/students/update', function (){
-    $student = Student::where('email', 'pitogoronalyn4@gmail.com')->first();
-    $student->email = 'pitogoronalyn4@gmail.com';
+    $student = Student::where('email', 'johndoe@gmail.com')->first();
+    $student->email = 'john.doe@gmail.com';
     $student->save();
     return 'Student Updated';
 });
 
 Route::get('/student/delete', function (){
-    $student = $Student::where('email', 'pitogoronalyn4@gmail.com')->first();
+    $student = $Student::where('email', 'jhondoe@gmail.com')->first();
     $student->delete();
     return 'Student Deleted!';
 });
